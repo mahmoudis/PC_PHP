@@ -13,9 +13,9 @@ class ProfCoursTest extends TestCase
     const SQL_FILE = "db.sql";
 
     //  #######    CHANGE THIS TO HAVE CREDENTIAL OF YOUR DATABASE       ##########
-    const DB_USER = "user03";
-    const DB_PASS = "user03";
-    const DB_NAME = "user03_test_php";
+    const DB_USER = "user02";
+    const DB_PASS = "user02";
+    const DB_NAME = "user02_test_php";
     const DB_HOST = "192.168.250.3";
 
     public static $conn = null;
@@ -45,10 +45,10 @@ class ProfCoursTest extends TestCase
                     $sql_db = str_replace(self::FAKE_DBNAME, self::DB_NAME, $sql_db);
                         $sql_stmt = self::$conn->prepare($sql_db);
                     if($sql_stmt->execute()) {
-                        print "Creation à la base de données ". self::DB_NAME." REUSSIE \n";
+                        print "Creation à la base de données ". self::DB_NAME." REUSSIE  OK ___\n";
                         $sql_stmt->closeCursor();
                         self::$conn->query("USE ".self::DB_NAME.";")->closeCursor();
-                        print "Connexion à la base de donnée \n";
+                        print "Connexion à la base de donnée OK \n";
                     } else {
                         echo 'Creation de la base de données '. self::DB_NAME .' ECHOUEE';
                     }
@@ -142,7 +142,7 @@ class ProfCoursTest extends TestCase
     {
         print __METHOD__."\n";
         $conn = $this->getConnection();
-        print "ADD prof \n";
+        print "ADD A prof \n";
         foreach (self::$prof_a as $prof) {
             $prof->add($conn);
         }
@@ -162,7 +162,7 @@ class ProfCoursTest extends TestCase
     }
 
     /**
-     * Nous compterons le nobre d'enregistrement que nous comparerons au nombre d'élément du tableau.
+     * Nous compterons le nombre d'enregistrement que nous comparerons au nombre d'élément du tableau.
      * REQUIRE: Assurez vous qu'aucune suppression n'a été faite.
      * @order 2
      */
