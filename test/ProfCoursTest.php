@@ -13,9 +13,9 @@ class ProfCoursTest extends TestCase
     const SQL_FILE = "db.sql";
 
     //  #######    CHANGE THIS TO HAVE CREDENTIAL OF YOUR DATABASE       ##########
-    const DB_USER = "user01";
-    const DB_PASS = "user01";
-    const DB_NAME = "user01_test_php";
+    const DB_USER = "user03";
+    const DB_PASS = "user03";
+    const DB_NAME = "user03_test_php";
     const DB_HOST = "192.168.250.3";
 
     public static $conn = null;
