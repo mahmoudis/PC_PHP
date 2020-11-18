@@ -123,7 +123,7 @@ class ProfCoursTest extends TestCase
     protected function setUp():void
     {
         parent::setUp();
-        print __METHOD__."setup --- \n";
+        print __METHOD__."setup --- ++\n";
     }
 
     protected function tearDown():void
